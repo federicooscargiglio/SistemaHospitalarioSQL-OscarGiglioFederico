@@ -1,5 +1,5 @@
 # SistemaHospitalarioSQL-OscarGiglioFederico
-# Sistema de Gestión Hospitalaria (SGH)
+Sistema de Gestión Hospitalaria (SGH)
 
 Este proyecto forma parte de la cursada de SQL. Consiste en una base de datos para una clínica de mediana complejidad.
 
