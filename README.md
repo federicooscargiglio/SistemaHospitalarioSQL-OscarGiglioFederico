@@ -2,42 +2,28 @@
 
 Sistema de Gestión Hospitalaria (SGH)
 
-Este proyecto forma parte de la cursada de Base de Datos SQL (UTN).
-Consiste en el diseño y desarrollo de una base de datos relacional
-para una clínica privada de mediana complejidad.
+Proyecto de la cursada de Base de Datos SQL (UTN). Diseño y desarrollo 
+de una base de datos relacional para una clínica privada de mediana 
+complejidad.
 
 ## Organización del Repositorio
 
-* `/scripts`: Contiene los scripts SQL del proyecto.
-  * `tp2_datos_FedericoOscarGiglio.sql` — Creación de tablas (DDL) e inserción de datos (DML).
-  * `tp2_objetos_FedericoOscarGiglio.sql` — Vistas, Funciones, Stored Procedures y Triggers.
-* `/Docs`: Documentación técnica en PDF de cada entrega.
-* `/Img`: Diagrama Entidad-Relación (DER).
+- **scripts/** → Scripts SQL del proyecto
+  - `tpfinal_estructura_...sql` → DDL + vistas + funciones + SPs + triggers
+  - `tpfinal_datos_...sql` → Poblado de todas las tablas
+  - `tpfinal_informes_...sql` → 13 consultas analíticas
+- **Docs/** → Documentación PDF del proyecto
+- **Img/** → Diagrama Entidad-Relación
 
-## Entregas
+## Orden de ejecución
 
-### Entrega 1
-- Diseño del modelo relacional.
-- Creación de tablas y relaciones (DDL).
-- Diagrama Entidad-Relación.
+1. `scripts/tpfinal_estructura_FedericoOscarGiglio.sql`
+2. `scripts/tpfinal_datos_FedericoOscarGiglio.sql`
+3. `scripts/tpfinal_informes_FedericoOscarGiglio.sql` (opcional)
 
-### Entrega 2
-- Inserción de datos de prueba (DML).
-- Creación de Vistas, Funciones, Stored Procedures y Triggers.
-- Documentación completa en PDF.
+## Características
 
-## Cómo ejecutar
-
-1. Ejecutar primero `tp2_datos_FedericoOscarGiglio.sql` para crear las tablas e insertar los datos.
-2. Ejecutar luego `tp2_objetos_FedericoOscarGiglio.sql` para crear los objetos lógicos.
-3. Usar MySQL Workbench o cualquier cliente MySQL compatible.
-
-## Tecnologías
-
-- SQL / MySQL 8.0
-- MySQL Workbench
-```
-
-Para actualizarlo en GitHub: click en `README.md` desde la raíz del repo → ícono del lápiz (editar) → reemplazás el contenido → commit con el mensaje:
-```
-Actualiza README con estructura y entregas del TP2
+- 16 tablas (1 de hechos, 2 transaccionales, 1 de auditoría, 12 entidades/catálogo)
+- 6 vistas, 3 funciones, 4 stored procedures, 3 triggers
+- Tabla de hechos poblada automáticamente vía trigger
+- Stored procedure con transacción para facturación
